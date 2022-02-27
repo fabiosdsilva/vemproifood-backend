@@ -4,7 +4,7 @@ class ApiWeatherMap {
 
     public key = process.env.KEY_WEATHER;
 
-    async index() {
+    async index(city?: string, lon?: string, lat?: string) {
         try {
             const getTemp = await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=campinas&appid=${this.key}`)
 
