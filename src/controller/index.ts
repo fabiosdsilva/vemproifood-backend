@@ -8,9 +8,9 @@ class Index {
    async index(req: Request, res: Response) {
        // City, Lon, Lag
        try {
-          const result = await ApiWeatherMap.index() ;
+          const result: WetaherMap = await ApiWeatherMap.index() ;
           return res.json(result);
-          
+
        } catch (e) {
            const errror: string[] = [`${e}`];
            return res.status(401).json({ errror });
